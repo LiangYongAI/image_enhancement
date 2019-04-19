@@ -145,10 +145,10 @@ int SaveEnhancement(string inputDir, string outputDir)
 			cout << "height is " << inputImage.rows << " width is " << inputImage.cols << " channel is " << inputImage.channels() << endl;
 
 			Mat outputImage;
-			//Histogram(inputImage, outputImage);
+			Histogram(inputImage, outputImage);
 			//Laplace(inputImage, outputImage);
 			//Log(inputImage, outputImage);
-			Gamma(inputImage, outputImage);
+			//Gamma(inputImage, outputImage);
 			string savePath = outputDir;
 			savePath = savePath.append("\\").append(fname).append(ext);
 			imwrite(savePath, outputImage);
